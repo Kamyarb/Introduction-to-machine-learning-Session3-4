@@ -228,3 +228,96 @@ The **concat()** function in pandas is used to append either columns or rows fro
 ### apply function
 
 Pandas.apply allow the users to pass a function and apply it on every single value of the Pandas series. It uses the function along the series provided, column (axis=0) or row (axis=1).
+
+# Exploratory Data Analysis (EDA)
+
+EDA is one of the most important first steps when dealing with new data.It allows us to better understand the data and the tools we can use in future steps.
+![EDA](https://i.postimg.cc/dQ6tFJV8/EDA.jpg)
+
+## Setting up our DataFrame
+we'll be exploring the IMDB Movies dataset from Kaggle!
+
+### Closer Look at the Variables
+Training set contains 1000 samples and 16 variables:
+
+*    **Poster_Link** - Link of the poster that imdb using
+*    **Series_Title** - Name of the movie
+*    **Released_Year** - Year at which that movie released
+*    **Certificate** - Certificate earned by that movie
+*    **Runtime** - Total runtime of the movie
+*    **Genre** - Genre of the movie
+*    **IMDB_Rating** - Rating of the movie at IMDB site
+*    **Overview** - mini story/ summary
+*    **Meta_score** - Score earned by the movie
+*    **Director** - Name of the Director
+*    **Star1,Star2,Star3,Star4** - Name of the Stars
+*    **Noofvotes** - Total number of votes
+*    **Gross** - Money earned by that movie
+
+
+## Step1: Understand the data
+An introductory step is to look at the content of the data to get an idea of what you're going to be dealing with.
+We can gain insight on the data with the following commands:
+
+* **df.shape** (row, column)
+* **df.columns** (column titles)
+* **df.head** (top 5 results in table format)
+* **df.nunique** (count of unique values for each variable/dimension)
+* **df.isnull().sum()** (number of missing values in the data set) 
+* **describe()** (description of the data in the DataFrame)
+
+
+
+## Step 2: Data Cleaning
+Data cleaning is used to not only increase the data integrity, but to also make it more usable and understandable to humans.
+
+**Broad Overview of Cleaning Steps**
+
+* **Handle empty values:** you can delete them, fill them with a value that makes sense
+* **Check for data consistency:** case may be important for strings, formatting, etc
+* **Handle outliers**
+* **Remove duplicates**
+* **Validate correctness of entries:** age columns shouldn't contain text, for instance
+
+![cleaning](https://i.postimg.cc/5y2JyF28/cleaning-data.png)
+
+
+
+<table><tr>
+<td> <img src="https://i.postimg.cc/yd6tyCCH/fillna1.png" alt="Drawing" style="width: 390px;"/> </td>
+<td> <img src="https://i.postimg.cc/SQ1FVRKt/fillna2.png" alt="Drawing" style="width: 390px;"/> </td>
+</tr></table>
+
+### Check for duplicate data
+* The **duplicated()** method returns a Series with True and False values that describe which rows in the DataFrame are duplicated and not. 
+* The **drop_duplicates()** method returns DataFrame with duplicate rows removed
+
+## Data Visualization
+
+### Plotly
+Plotly's Python graphing library creates interactive, publication-ready graphs. Within Plotly, there is Plotly Express, which is a high level API designed to be as consistent and easy to learn as possible.
+![plotly](https://i.postimg.cc/Dy4DgcH8/plotly.png)
+
+
+<div>
+ <img src = "https://i.postimg.cc/fLbq07YW/titanic.jpg" width="300 px" />
+</div>
+
+![newplot (7)](https://user-images.githubusercontent.com/100142624/181497548-5356f7d3-d1e2-4bc6-b30d-75651746db26.png)
+
+
+![newplot (8)](https://user-images.githubusercontent.com/100142624/181497571-cf540be4-ac61-45b9-8e00-6e18d629c3c7.png)
+![newplot (9)](https://user-images.githubusercontent.com/100142624/181497590-0449832e-7332-4efe-b7e4-0f8fd3917653.png)
+![newplot (10)](https://user-images.githubusercontent.com/100142624/181497609-91cefbd2-bbd9-4ea2-8f32-4d067294a42f.png)
+![newplot (11)](https://user-images.githubusercontent.com/100142624/181497625-eac287c2-254a-46b5-b7a1-f3cf6759952b.png)
+![newplot (12)](https://user-images.githubusercontent.com/100142624/181497668-d18745a2-6ff3-43f9-ace3-8558ad68b6a5.png)
+
+
+## Exploratory Data Analysis Tools (2022)
+Imagine being able to generate insights from your data within minutes, whilst a data scientist takes over an hour using R or Python. That’s the benefit of using these exploratory data analysis tools.
+
+The five most popular Python EDA tools: DataPrep, Pandas-profiling, SweetViz, Lux, and D-Tale. We will be focusing on D-Tale in this lecture.  
+**DTale** is a Graphical Interface where we can select the data we want to analyze and how to analyze using different graphs and plots.   
+![EDA](https://i.postimg.cc/SQYFTqzS/EDA2.png)
+
+`pip install dtale`
