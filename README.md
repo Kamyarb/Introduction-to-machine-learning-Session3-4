@@ -321,3 +321,10 @@ The five most popular Python EDA tools: DataPrep, Pandas-profiling, SweetViz, Lu
 ![EDA](https://i.postimg.cc/SQYFTqzS/EDA2.png)
 
 `pip install dtale`
+
+
+![newplot (13)](https://user-images.githubusercontent.com/100142624/181498426-90735376-d819-4d1b-b0be-5895ad527e9c.png)
+
+![newplot (14)](https://user-images.githubusercontent.com/100142624/181498479-f679895c-530a-4890-879e-00f38e96f981.png)
+
+
